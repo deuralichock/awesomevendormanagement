@@ -1,0 +1,56 @@
+﻿
+
+@model AwesomeVenderManagement.ViewModels.VendorViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Vendor Management</h2>
+
+<link href="~/Content/modal.css" rel="stylesheet" />
+
+<script src="~/Scripts/angular.min.js"></script>
+
+<script src="~/Scripts/app/directives/ng-model.js"></script>
+
+<script src="~/Scripts/app/Vendor/mainVendor.js"></script>
+<script src="~/Scripts/app/VendorCategory/mainVenderCategory.js"></script>
+<script src="~/Scripts/app/VendorCategory/venderCategoryService.js"></script>
+
+<script src="~/Scripts/app/Vendor/vendorService.js"></script>
+<script src="~/Scripts/app/Vendor/vendorController.js"></script>
+
+
+
+<div ng-app="venderModule"
+     ng-controller="venderController"
+     ng-cloak="ng-cloak"
+     style="margin:10%"
+     class="container"
+     >
+
+    <div style="padding-bottom:2%;">
+
+        <button id="btnAddVendor" 
+                name="btnAddVendor" 
+                class="btn btn-info"
+                ng-click="toggleCreateVendorModal()">
+                Add  New Vendor
+        </button>
+
+    </div>
+
+
+
+
+    <div class="container">
+        @Html.Partial("_listVendor")
+        @Html.Partial("_createVendor", this.Model)
+        @Html.Partial("_deleteVender")
+        @Html.Partial("_vendorDetails")
+        @Html.Partial("_editVendor", this.Model)
+
+    </div>
+
+</div>
+

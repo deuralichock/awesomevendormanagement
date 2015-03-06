@@ -1,0 +1,22 @@
+﻿
+<div>
+    <table class="table table-bordered table-hover table-striped">
+
+        <tr>
+            <td>Vendor Category</td>
+            <td>Vendor Description</td>
+            <td>Actions</td>
+        </tr>
+
+        <tr ng-repeat="venderCategory in venderCategories">
+            <td>{{venderCategory.VendorName}}</td>
+            <td>{{venderCategory.VendorDescription}}</td>
+            <td>
+
+                <span><button class="btn btn-info">Details&nbsp;</button></span>
+                <span><button class="btn btn-info" ng-click="toggleEditModal(venderCategory)">Edit&nbsp;</button></span>
+                <span><button class="btn btn-danger" ng-click="togleDeleteModal(venderCategory)">Delete</button></span>
+            </td>
+        </tr>
+    </table>
+</div>

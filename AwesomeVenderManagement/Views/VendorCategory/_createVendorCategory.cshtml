@@ -1,0 +1,51 @@
+﻿
+<modal-dialog show='modalShown'
+              width='500px'
+              dialog-title='Add New Vendor Category'
+              on-close='logClose()'>
+
+
+    <table>
+        <tr>
+
+            <td>Vender Category</td>
+            <td>
+                <input type="text"
+                       ng-model="vendorCategoryCreateData.venderCategoryName"
+                       class="form-control"
+                       required />
+            </td>
+        </tr>
+        <tr>
+
+            <td>Vender Description</td>
+            <td>
+
+                <textarea class="form-control"
+                          id="venderDescription" name="venderDescription"
+                          ng-model="vendorCategoryCreateData.venderCategoryDescription"
+                          rows="10" cols="30"></textarea>
+            </td>
+        </tr>
+
+        <tr style="width:10%;">
+            <td colspan="2"></td>
+        </tr>
+
+        <tr>
+
+            <td>&nbsp;</td>
+            <td>
+                <div>
+                    <button id="btnEdit"
+                            name="btnEdit"
+                            class="btn btn-info"
+                            ng-click="createNewVendorCategory()">
+                        Create
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</modal-dialog>

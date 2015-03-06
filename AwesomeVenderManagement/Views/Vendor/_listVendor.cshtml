@@ -1,0 +1,23 @@
+﻿<table class="table table-bordered table-hover table-striped">
+
+    <tr ng-show="venders.length > 0">
+        <td>Vendor Name</td>
+        <td>Vendor Description</td>
+        <td>Vendor Category</td>
+        <td>Actions</td>
+    </tr>
+    <tr ng-repeat="vender in venders">
+
+        <td>{{vender.VendorName}}</td>
+        <td>{{vender.VendorDescription}}</td>
+        <td>{{vender.VendorCategoryName}}</td>
+        <td>
+
+
+            <button class="btn btn-info" ng-click="toggleDetailsModal(vender)">Details&nbsp;</button>
+            <button class="btn btn-info" ng-click="toggleVendorEditModal(vender)">Edit&nbsp;</button>
+            <button class="btn btn-danger" ng-click="toggleDeleteModal(vender)">Delete</button>
+
+        </td>
+    </tr>
+</table>

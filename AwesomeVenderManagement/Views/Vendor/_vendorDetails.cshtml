@@ -1,0 +1,59 @@
+﻿
+<modal-dialog show='toggleVendorDetailsModalDomain.modalShown'
+              width='1000px'
+              dialog-title='vendor Details'
+              on-close='logClose()'
+              height="100%"
+              overflow="scroll">
+
+
+    <div ng-repeat="vendor in currentVendors">
+
+        <div>
+
+            <fieldset style="border:solid 2px blue">
+            
+            <legend>Vendor Information </legend>
+
+                <div>Vendor Name : <span>{{vendor.VendorName}}</span></div>
+                <div>Vendor Description : <span>{{vendor.VendorDescription}}</span></div>
+                <div>Vendor Description : <span>{{vendor.VendorCategoryName}}</span></div>
+
+            </fieldset>
+        </div>
+
+        <div>
+
+            <fieldset style="border:solid 2px blue">
+
+                <legend>Vendor Contact Information </legend>
+
+                <div>Vendor Contact Person First Name : <span>{{vendor.ContactPersonFirstName}}</span></div>
+                <div>Vendor Contact Person Middle Name: <span>{{vendor.ContactPersonMiddleName}}</span></div>
+                <div>Vendor Contact Person Last Name : <span>{{vendor.ContactPersonLastName}}</span></div>
+                <div>Email : <span>{{vendor.VendorState}}</span></div>
+                <div>Home Phone : <span>{{vendor.VendorZipCode}}</span></div>
+                <div>Cell Phone : <span>{{vendor.VendorCountry}}</span></div>
+
+            </fieldset>
+        </div>
+
+        <div>
+
+            <fieldset style="border:solid 2px blue">
+
+                <legend>Vendor Address </legend>
+
+                <div>Vendor Address1 : <span>{{vendor.VendorAddress1}}</span></div>
+                <div>Vendor Address2 : <span>{{vendor.VendorAddress2}}</span></div>
+                <div>Vendor City : <span>{{vendor.VendorCity}}</span></div>
+                <div>Vendor State : <span>{{vendor.VendorState}}</span></div>
+                <div>Vendor ZipCode : <span>{{vendor.VendorZipCode}}</span></div>
+                <div>Vendor Country : <span>{{vendor.VendorCountry}}</span></div>
+
+            </fieldset>
+        </div>
+
+    </div>
+
+</modal-dialog>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<link href="~/Content/modal.css" rel="stylesheet" />
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/app/VendorCategory/mainVenderCategory.js"></script>
+<script src="~/Scripts/app/VendorCategory/venderCategoryService.js"></script>
+<script src="~/Scripts/app/VendorCategory/vendorCategoryController.js"></script>
+<script src="~/Scripts/app/directives/ng-model.js"></script>
+
+
+
+<br /><br />
+
+<div ng-app="venderCategoryModule"
+     ng-controller="venderCategoryController"
+     ng-cloak="ng-cloak">
+
+    <div>
+
+        <button id="btnAddVendorCategory" name="btnAddVendorCategory" class="btn btn-info"
+                ng-click="toggleModal()">
+            Add  New Vendor Category
+        </button>
+
+    </div>
+
+    
+    @Html.Partial("_listVendorCategory")
+
+    @Html.Partial("_createVendorCategory")
+
+   
+
+    <br />
+    @Html.Partial("_EditVendorCategory")
+
+    @Html.Partial("_deleteVendorCategory")
